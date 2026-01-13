@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "total_years_experience",
+    "roles",
+    "remote_experience",
+    "leadership_experience"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the person"
+    },
+    "total_years_experience": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Estimated total years of professional experience"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "Job titles mentioned in the CV"
+    },
+    "remote_experience": {
+      "type": "boolean",
+      "description": "True if the CV explicitly mentions remote work"
+    },
+    "leadership_experience": {
+      "type": "boolean",
+      "description": "True if leadership or team lead responsibilities are mentioned"
+    }
+  },
+  "additionalProperties": false
+}
